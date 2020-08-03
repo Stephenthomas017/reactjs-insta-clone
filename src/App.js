@@ -70,11 +70,11 @@ function App() {
       event.preventDefault();
       auth
       .createUserWithEmailAndPassword(email,password)
-      .catch((error) =>alert(error.message))
       .then((authUser) =>{
         return authUser.user.updateProfile({
           displayName:username
         })
+      .catch((error) =>alert(error.message))
       })
       
   }
@@ -197,7 +197,7 @@ function App() {
         </div>
       
     {user?.displayName ? (
-        <ImageUploads username={username.displayName}  />
+        <ImageUploads username={user.displayName}  />
       ):(
         <h3>sorry you need to login to upload</h3>
       )}
