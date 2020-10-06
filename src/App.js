@@ -8,7 +8,7 @@ import {Button} from "@material-ui/core";
 import Input from '@material-ui/core/Input';
 import ImageUploads from "./ImageUploads"
 
-
+//Display Modal
 function getModalStyle() {
   const top = 50 ;
   const left = 50 ;
@@ -199,7 +199,7 @@ function App() {
     {user?.displayName ? (
         <ImageUploads username={user.displayName}  />
       ):(
-        <h3>sorry you need to login to upload</h3>
+        <h3>Sorry you need to login to upload</h3>
       )}
          
     
